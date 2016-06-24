@@ -9,7 +9,11 @@ set copyindent                  " copy the previous indentation on autoindenting
 set shiftwidth=4                " number of spaces to use for autoindenting
 set number
 set expandtab
-syntax enable
+set relativenumber
+
+autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+
+syntax on
 let NERDTreeIgnore = ['\.pyc$']
 
 " Enable folding
