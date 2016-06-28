@@ -1,6 +1,5 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/Peluche/.oh-my-zsh
-export GOPATH=$HOME/work
 
 # Unset manpath so we can inherit from /etc/manpath via the `manpath`
 # command
@@ -69,9 +68,13 @@ plugins=(git)
 # User configuration
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-# export MANPATH="/usr/local/man:$MANPATH"
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=~/GoWorkspace
+export PATH=$GOPATH/bin:$PATH
 
+# export MANPATH="/usr/local/man:$MANPATH"
 source $ZSH/oh-my-zsh.sh
+
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
