@@ -11,8 +11,6 @@ set number
 set expandtab
 set relativenumber
 
-autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
-
 syntax on
 let NERDTreeIgnore = ['\.pyc$']
 
