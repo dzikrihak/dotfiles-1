@@ -10,6 +10,8 @@ set shiftwidth=4                " number of spaces to use for autoindenting
 set number
 set expandtab
 set relativenumber
+set textwidth=90
+
 
 syntax on
 let NERDTreeIgnore = ['\.pyc$']
