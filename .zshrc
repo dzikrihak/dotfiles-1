@@ -13,6 +13,7 @@ else
 fi
 zstyle ':completion:*' rehash true
 
+alias dev="ssh devbox"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -71,7 +72,8 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=~/GoWorkspace
 export PATH=$GOPATH/bin:$PATH
-
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
+export PGDATA=/Users/Peluche/Library/Application\ Support/Postgres/var-9.5
 # export MANPATH="/usr/local/man:$MANPATH"
 source $ZSH/oh-my-zsh.sh
 
@@ -100,3 +102,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias vs="open -a 'Visual Studio Code'"
+alias vg="cd webapps/vagrant"
+alias vgup="vagrant up --provision && vagrant ssh"
