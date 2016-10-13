@@ -11,6 +11,8 @@ set number
 set expandtab
 set relativenumber
 set textwidth=90
+set t_Co=256
+set term=screen-256color
 colorscheme seattle
 
 
