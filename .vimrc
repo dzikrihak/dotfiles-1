@@ -11,6 +11,7 @@ set number
 set expandtab
 set relativenumber
 set textwidth=90
+colorscheme seattle
 
 
 syntax on
