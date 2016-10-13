@@ -6,11 +6,17 @@ export ZSH=/Users/Peluche/.oh-my-zsh
 unset MANPATH # delete if you already modified MANPATH elsewhere in your config
 MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 
-if [ -e /usr/share/terminfo/x/xterm-256color ]; then
-        export TERM='xterm-256color'
-else
-        export TERM='xterm-color'
+#if [ -e /usr/share/terminfo/x/xterm-256color ]; then
+#        export TERM='xterm-256color'
+#else
+#        export TERM='xterm-color'
+#fi
+
+if [ "$TERM" = "xterm"  ]; then
+      export TERM=xterm-256color
 fi
+
+
 zstyle ':completion:*' rehash true
 
 alias dev="ssh devbox"
@@ -106,3 +112,5 @@ alias vs="open -a 'Visual Studio Code'"
 alias vg="cd ~/webapps/vagrant"
 alias vgup="vagrant up --provision && vagrant ssh"
 alias dpyc="find . -name '*.pyc' -delete"
+alias tmux="tmux -2"
+alias tmux="tmux -u"
