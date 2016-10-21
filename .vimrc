@@ -27,6 +27,10 @@ set foldlevel=99
 nnoremap <space> za
 nnoremap Q <nop>
 
+" Markdown Ish
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'javascript', 'css', 'sass']
+let g:markdown_syntax_conceal = 0
 
 "split navigations
 nnoremap <C-J> <C-W><C-J>
