@@ -1,11 +1,11 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
-set encoding=utf-8 " Necessary to show Unicode glyphs
+set nocompatible                " be iMproved, required
+set encoding=utf-8              " Necessary to show Unicode glyphs
 set showmode                    " always show what mode we're currently editing in
 set tabstop=4                   " a tab is four spaces
 set softtabstop=4
 set autoindent                  " always set autoindenting on
 set copyindent                  " copy the previous indentation on autoindenting
+set smartindent
 set shiftwidth=4                " number of spaces to use for autoindenting
 set number
 set expandtab
@@ -13,15 +13,35 @@ set relativenumber
 set textwidth=90
 set t_Co=256
 set term=screen-256color
-colorscheme seattle
-
-
+set hlsearch                    " Hightlight words during search
+set showmatch                   " Always show matching parenthesis when one is hightlighted
+set hidden
+set history=100
+filetype on                     " required
 syntax on
+colorscheme vice
+
+" Change map key
+let mapleader=" "
+
+" Reload vim config without restart
+map <leader>s :source ~/.vimrc<CR>
+
+
+" NERDTree Config
 let NERDTreeIgnore = ['\.pyc$']
+nmap <leader>n :NERDTreeToggle<CR>
+
 
 " Enable folding
 set foldmethod=indent
 set foldlevel=99
+
+" set a colored column to avoid going too far to the right
+set colorcolumn=90
+
+" Cancel a search with escape
+nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
 
 " Enable folding with the spacebar
 nnoremap <space> za
@@ -74,7 +94,7 @@ Plugin 'tpope/vim-markdown'
 Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'chriskempson/base16-vim'
 
-" set indentation settings for python files 
+" set indentation settings for python files
 au BufNewFile,BufRead *.py
     \ set tabstop=4 |
     \ set softtabstop=4 |
@@ -83,6 +103,9 @@ au BufNewFile,BufRead *.py
     \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix |
+
+" Remove whitespace on save
+autocmd BufWritePre * :%s/\s\+$//e
 
 "define BadWhitespace before using in a match
 highlight BadWhitespace ctermbg=red guibg=darkred
