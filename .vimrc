@@ -19,7 +19,7 @@ set hidden
 set history=100
 filetype on                     " required
 syntax on
-colorscheme vice
+colorscheme kolor
 
 " Change map key
 let mapleader=" "
