@@ -20,7 +20,7 @@ set history=100
 filetype on                     " required
 syntax on
 syntax enable
-colorscheme kolor
+colorscheme seoul256
 
 " Change map key
 let mapleader=" "
