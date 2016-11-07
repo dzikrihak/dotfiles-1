@@ -75,9 +75,14 @@ plugins=(git)
 # User configuration
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-export PATH=$PATH:/usr/local/go/bin
-export GOPATH=~/GoWorkspace
-export PATH=$GOPATH/bin:$PATH
+
+# Set Up GO Environment
+export GOROOT="/usr/local/go"
+export GOPATH="~/GoWorkspace"
+export PATH="$GOPATH/bin:$PATH"
+
+
+
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 export PGDATA=/Users/Peluche/Library/Application\ Support/Postgres/var-9.5
 # export MANPATH="/usr/local/man:$MANPATH"
