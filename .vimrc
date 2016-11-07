@@ -73,6 +73,10 @@ Plugin 'mattn/emmet-vim'
 Plugin 'tpope/vim-markdown'
 Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'chriskempson/base16-vim'
+Plugin 'hdima/python-syntax'
+
+
+let python_highlight_all=1
 
 " set indentation settings for python files 
 au BufNewFile,BufRead *.py
