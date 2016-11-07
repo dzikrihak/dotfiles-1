@@ -19,6 +19,7 @@ set hidden
 set history=100
 filetype on                     " required
 syntax on
+syntax enable
 colorscheme kolor
 
 " Change map key
@@ -94,6 +95,8 @@ Plugin 'tpope/vim-markdown'
 Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'chriskempson/base16-vim'
 Plugin 'hdima/python-syntax'
+Plugin 'herrbischoff/cobalt2.vim'
+Plugin 'noah/vim256-color'
 
 
 let python_highlight_all=1
