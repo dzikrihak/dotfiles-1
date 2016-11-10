@@ -117,11 +117,12 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshconfig="vim ~/.zshrc"
 alias vs="open -a 'Visual Studio Code'"
 alias vg="cd ~/webapps/vagrant"
 alias vgup="vagrant up --provision && vagrant ssh"
 alias dpyc="find . -name '*.pyc' -delete"
 alias tmux="tmux -2"
 alias tmux="tmux -u"
+alias activate="source env/bin/activate"
