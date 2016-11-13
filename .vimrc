@@ -20,7 +20,10 @@ set history=100
 filetype on                     " required
 syntax on
 syntax enable
-colorscheme seoul256
+set background=dark
+colorscheme alduin
+
+
 
 " Change map key
 let mapleader=" "
