@@ -28,6 +28,13 @@ colorscheme alduin
 " Change map key
 let mapleader=" "
 
+
+" Disable Typescript indentation
+let g:typescript_indent_disable = 1
+
+" Make the quickfix window automatically appear if :make has any errors
+autocmd QuickFixCmdPost [^l]* nested cwindow
+autocmd QuickFixCmdPost    l* nested lwindow
 " Reload vim config without restart
 map <leader>s :source ~/.vimrc<CR>
 
@@ -100,6 +107,7 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'hdima/python-syntax'
 Plugin 'herrbischoff/cobalt2.vim'
 Plugin 'noah/vim256-color'
+Plugin 'leafgarland/typescript-vim'
 
 
 let python_highlight_all=1
