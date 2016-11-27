@@ -108,6 +108,7 @@ Plugin 'hdima/python-syntax'
 Plugin 'herrbischoff/cobalt2.vim'
 Plugin 'noah/vim256-color'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'elzr/vim-json'
 
 
 let python_highlight_all=1
