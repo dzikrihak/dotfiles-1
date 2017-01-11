@@ -21,7 +21,7 @@ filetype on                     " required
 syntax on
 syntax enable
 set background=dark
-colorscheme dracula
+colorscheme seattle
 
 
 
