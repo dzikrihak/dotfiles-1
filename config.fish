@@ -7,6 +7,7 @@ abbr -a c   clear
 
 # Aliases
 alias vs="open -a 'Visual Studio Code'"
+alias vim="open -a 'macVim'"
 alias dpyc="find . -name '*.pyc' -delete"
 alias clean="find . -name '*.sw*' -delete"
 alias tmux="tmux -u"
