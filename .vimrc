@@ -41,6 +41,9 @@ else
     colorscheme seattle
 endif
 
+" ignore node_modules x DS_Store x git in ctrlp
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
 " Fix indentation issues in YAML config files
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType yml  setlocal ts=2 sts=2 sw=2 expandtab
