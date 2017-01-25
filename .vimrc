@@ -111,7 +111,7 @@ nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 " markdown language support
-let g:markdown_fenced_languages = ['c', 'html', 'python', 'bash=sh', 'javascript', 'css', 'sass']
+let g:markdown_fenced_languages = ['c', 'sql', 'html', 'python', 'bash=sh', 'javascript', 'css', 'sass']
 let g:markdown_syntax_conceal = 0
 
 "split navigations
