@@ -25,10 +25,7 @@ set showmatch                   " Always show matching parenthesis when one is h
 set lazyredraw                  " redraw only when we need to
 set shiftwidth=4                " number of spaces to use for autoindenting
 set textwidth=80                " Maximum width of the editor
-" set t_Co=256                    " Allow support for 256 colors
-" set term=screen-256color        " Tell vim we're using a 256 color terminal
 set colorcolumn=80              " set a colored column to avoid going too far to the right
-set termguicolors
 
 
 set hidden
@@ -39,7 +36,11 @@ if has("gui_running")
     set guifont=Monaco:h16
     colorscheme inkpot
 else
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
     colorscheme inkpot
+    set termguicolors
 endif
 
 " ignore node_modules x DS_Store x git in ctrlp
