@@ -107,6 +107,10 @@ nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
 " nnoremap <space> za
 " nnoremap Q <nop>
 
+" Explicitly use pylint to check python syntax
+let g:syntastic_python_checkers = ['pylint']
+
+
 " ** - Markdown shizzle - **
 
 " set .md files type to markdown
