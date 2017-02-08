@@ -27,8 +27,6 @@ set shiftwidth=4                " number of spaces to use for autoindenting
 set textwidth=80                " Maximum width of the editor
 set colorcolumn=80              " set a colored column to avoid going too far to the right
 
-set scrolloff=15
-
 set hidden
 set history=100
 
