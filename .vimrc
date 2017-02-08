@@ -42,12 +42,12 @@ else
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
-    colorscheme inkpot
+    colorscheme dracula
     set termguicolors
 endif
 
 " ignore node_modules x DS_Store x git in ctrlp
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|env\|__pycache__'
 
 " Fix indentation issues in YAML config files
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
