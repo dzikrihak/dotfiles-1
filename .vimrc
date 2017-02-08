@@ -1,7 +1,7 @@
-set nocompatible                " be iMproved, required
 set encoding=utf-8              " Necessary to show Unicode glyphs
 set showmode                    " always show what mode we're currently editing in
 filetype plugin indent on       " allows filetype detection
+set nocompatible                " be iMproved, required
 
 " Enable syntax processing
 syntax on
@@ -27,14 +27,19 @@ set shiftwidth=4                " number of spaces to use for autoindenting
 set textwidth=80                " Maximum width of the editor
 set colorcolumn=80              " set a colored column to avoid going too far to the right
 
+set scrolloff=15
 
 set hidden
 set history=100
+
+set splitright                  " create a new split to the right when calling :new
+set splitbelow                  " same as above but for horizontal splits
 
 " If on mac vim bump the font size and set the font to monaco
 if has("gui_running")
     set guifont=Monaco:h16
     colorscheme inkpot
+
 else
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
@@ -71,15 +76,15 @@ set noswapfile
 
 " Useful mappings for managing tabs
 
+" map leader key to <space>
+let mapleader=" "
+
 inoremap jk <ESC>
 
 map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove
-
-" map leader key to <space>
-let mapleader=" "
 
 " enable fast saving of files using <space> w
 nmap <leader>w :w!<cr>
@@ -105,11 +110,30 @@ nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
 
 " Enable folding with the spacebar
 " nnoremap <space> za
-" nnoremap Q <nop>
+nnoremap Q <nop>
 
 " Explicitly use pylint to check python syntax
 let g:syntastic_python_checkers = ['pylint']
 
+" Disable Arrow Keys
+
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+nnoremap j gj
+nnoremap k gk
+
+" Easier split navigation
+
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 " ** - Markdown shizzle - **
 
