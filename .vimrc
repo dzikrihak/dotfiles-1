@@ -148,13 +148,6 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" Disable arrow keys for navigation
-noremap <Up> <nop>
-noremap <Down> <nop>
-noremap <Left> <nop>
-noremap <Right> <nop>
-
-
 " set the runtime path to include Vundle and initialize
 set shell=/bin/bash
 set rtp+=~/.vim/bundle/Vundle.vim
