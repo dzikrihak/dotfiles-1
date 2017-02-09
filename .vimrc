@@ -160,7 +160,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repoPlugin 'posva/vim-vue'
+" plugin on GitHub repo
 Plugin 'posva/vim-vue'
 Plugin 'tpope/vim-fugitive'
 Plugin 'junegunn/goyo.vim'
@@ -201,6 +201,9 @@ au BufNewFile,BufRead *.py
 
 " Remove whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
+
+" Set .vue syntax hightlighting to html
+autocmd BufNewFile,BufRead *.vue   set syntax=html
 
 "define BadWhitespace before using in a match
 highlight BadWhitespace ctermbg=red guibg=#CD5C5C
