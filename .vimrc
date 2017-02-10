@@ -161,6 +161,8 @@ Plugin 'VundleVim/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
+
+Plugin 'mxw/vim-jsx'
 Plugin 'posva/vim-vue'
 Plugin 'tpope/vim-fugitive'
 Plugin 'junegunn/goyo.vim'
