@@ -202,8 +202,19 @@ au BufNewFile,BufRead *.py
 " Remove whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
 
+" ** VUE JS SPECIFIC SETTINGS ** "
 " Set .vue syntax hightlighting to html
-autocmd BufNewFile,BufRead *.vue   set syntax=html
+" These are all copied from posva/vim-vue
+autocmd BufNewFile,BufRead *.vue setf vue.html.javascript.css
+
+" ft_plugin
+if exists("b:did_ftplugin")
+  finish
+endif
+
+runtime! ftplugin/html.vim
+
+" ** END OF VUE JS SPECIFIC SETTINGS ** "
 
 "define BadWhitespace before using in a match
 highlight BadWhitespace ctermbg=red guibg=#CD5C5C
