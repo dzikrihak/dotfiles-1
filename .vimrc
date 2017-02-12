@@ -46,6 +46,9 @@ else
     set termguicolors
 endif
 
+" Airline theme
+let g:airline_theme='papercolor'
+
 " ignore node_modules x DS_Store x git in ctrlp
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|env\|__pycache__'
 
@@ -161,28 +164,26 @@ Plugin 'VundleVim/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
-Plugin 'posva/vim-vue'
-Plugin 'tpope/vim-fugitive'
+
+Plugin 'mxw/vim-jsx'
+Plugin 'fatih/vim-go'
 Plugin 'junegunn/goyo.vim'
 Plugin 'tpope/vim-surround'
-Plugin 'tmhedberg/SimpylFold'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'tpope/vim-commentary'
 Plugin 'ReplaceWithRegister'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/nerdcommenter'
 Plugin 'pangloss/vim-javascript'
-Plugin 'SirVer/ultisnips'
 Plugin 'digitaltoad/vim-pug'
+Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'mattn/emmet-vim'
 Plugin 'tpope/vim-markdown'
 Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'hdima/python-syntax'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'elzr/vim-json'
 
 call vundle#end()
 
@@ -225,3 +226,4 @@ au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
