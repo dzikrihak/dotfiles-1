@@ -14,7 +14,7 @@ source ~/.mutt/wombat.mutt
 ## -- Add your macros here -- ##
 ## -- Only useful in a multiple account scenatio -- ##
 
-set editor = "$EDITOR"
+set editor = "/usr/bin/vim"
 
 #-------- Basic Config {{
 #------------------------------------------------------
