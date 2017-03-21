@@ -167,6 +167,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'mxw/vim-jsx'
 Plugin 'fatih/vim-go'
+Plugin 'nginx.vim'
 Plugin 'junegunn/goyo.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'jelera/vim-javascript-syntax'
