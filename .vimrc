@@ -108,7 +108,7 @@ set foldmethod=indent
 set foldlevel=99
 
 " Cancel a search with escape
-nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
+" nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
 
 " Enable folding with the spacebar
 " nnoremap <space> za
