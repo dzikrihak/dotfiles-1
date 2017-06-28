@@ -166,6 +166,7 @@ Plugin 'VundleVim/Vundle.vim'
 " plugin on GitHub repo
 
 Plugin 'mxw/vim-jsx'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'fatih/vim-go'
 Plugin 'nginx.vim'
 Plugin 'junegunn/goyo.vim'
@@ -229,7 +230,7 @@ let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " Show syntax highlighting groups for word under cursor
-nmap <C-S-v> :call <SID>SynStack()<CR>
+nmap <leader>b :call <SID>SynStack()<CR>
 function! <SID>SynStack()
   if !exists("*synstack")
     return
