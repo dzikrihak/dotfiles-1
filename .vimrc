@@ -43,7 +43,7 @@ else
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
     set termguicolors
-    colorscheme cyberpunk
+    colorscheme neuromancer
 endif
 
 " Airline theme
@@ -228,3 +228,11 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
+" Show syntax highlighting groups for word under cursor
+nmap <C-S-v> :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
