@@ -166,7 +166,7 @@ Plugin 'VundleVim/Vundle.vim'
 " plugin on GitHub repo
 
 Plugin 'mxw/vim-jsx'
-Plugin 'exu/pgsql.vim'
+Plugin 'lifepillar/pgsql.vim'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'fatih/vim-go'
 Plugin 'nginx.vim'
@@ -207,7 +207,7 @@ au BufNewFile,BufRead *.py
 autocmd BufWritePre * :%s/\s\+$//e
 
 " Set *.sql files to pgsql syntax highlighting
-autocmd BufNewFile,BufRead *.sql setf pgsql
+let g:sql_type_default = 'pgsql'
 
 " Add syntax highlighting for vue react angular jquery lodash d3 etc
 let g:used_javascript_libs = 'underscore, angularjs, jquery, d3, vue, react, flux, chai, handlebars'
