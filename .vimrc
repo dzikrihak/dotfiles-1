@@ -166,7 +166,8 @@ Plugin 'VundleVim/Vundle.vim'
 " plugin on GitHub repo
 
 Plugin 'mxw/vim-jsx'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'exu/pgsql.vim'
+Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'fatih/vim-go'
 Plugin 'nginx.vim'
 Plugin 'junegunn/goyo.vim'
@@ -205,10 +206,11 @@ au BufNewFile,BufRead *.py
 " Remove whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
 
-" ** VUE JS SPECIFIC SETTINGS ** "
-" Set .vue syntax hightlighting to html
-" These are all copied from posva/vim-vue
-autocmd BufNewFile,BufRead *.vue setf vue.html.javascript.css
+" Set *.sql files to pgsql syntax highlighting
+autocmd BufNewFile,BufRead *.sql setf pgsql
+
+" Add syntax highlighting for vue react angular jquery lodash d3 etc
+let g:used_javascript_libs = 'underscore, angularjs, jquery, d3, vue, react, flux, chai, handlebars'
 
 " ft_plugin
 if exists("b:did_ftplugin")
@@ -216,8 +218,6 @@ if exists("b:did_ftplugin")
 endif
 
 runtime! ftplugin/html.vim
-
-" ** END OF VUE JS SPECIFIC SETTINGS ** "
 
 "define BadWhitespace before using in a match
 highlight BadWhitespace ctermbg=red guibg=#CD5C5C
