@@ -39,6 +39,15 @@ set splitright                  " create a new split to the right when calling :
 set splitbelow                  " same as above but for horizontal splits
 set clipboard+=unnamedplus
 
+" Ignore swp pyc and other python(ish) related files
+set wildignore="*.swp, *.pyc, *.o"
+
+" Change terminal title
+set title
+
+" Lazy redrawing when executing macros
+set lazyredraw
+
 " If on mac vim bump the font size and set the font to monaco
 if has("gui_running")
     set guifont=Monaco:h16
@@ -53,7 +62,7 @@ else
 endif
 
 " Airline theme
-let g:airline_theme='papercolor'
+let g:airline_theme='luna'
 
 " ignore node_modules x DS_Store x git in ctrlp
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|env\|__pycache__'
@@ -91,7 +100,7 @@ inoremap jk <ESC>
 map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
-map <leader>tm :tabmove
+map <leader>tm :tabmove<cr>
 
 " enable fast saving of files using <space> w
 nmap <leader>w :w!<cr>
@@ -113,7 +122,7 @@ set foldmethod=indent
 set foldlevel=99
 
 " Cancel a search with escape
-" nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
+map <leader>/ :nohlsearch<CR>
 
 " Enable folding with the spacebar
 " nnoremap <space> za
@@ -123,7 +132,6 @@ nnoremap Q <nop>
 let g:syntastic_python_checkers = ['pylint']
 
 " Disable Arrow Keys
-
 nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
