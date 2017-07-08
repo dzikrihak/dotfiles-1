@@ -1,3 +1,8 @@
+" Set the shell to bash if using vim
+if &shell =~# 'fish$'
+    set shell=bash
+endif
+
 set encoding=utf-8              " Necessary to show Unicode glyphs
 set showmode                    " always show what mode we're currently editing in
 filetype plugin indent on       " allows filetype detection
@@ -32,6 +37,7 @@ set history=100
 
 set splitright                  " create a new split to the right when calling :new
 set splitbelow                  " same as above but for horizontal splits
+set clipboard+=unnamedplus
 
 " If on mac vim bump the font size and set the font to monaco
 if has("gui_running")
@@ -151,44 +157,38 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" set the runtime path to include Vundle and initialize
-set shell=/bin/bash
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+" Plugin management using junegunn/vim-plug
+call plug#begin('~/.vim/plugged')
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+" Plugin list
+Plug 'hail2u/vim-css3-syntax'
+Plug 'pearofducks/ansible-vim'
+Plug 'mxw/vim-jsx'
+Plug 'lifepillar/pgsql.vim'
+Plug 'othree/javascript-libraries-syntax.vim', { 'for': 'javascript' }
+Plug 'fatih/vim-go'
+Plug 'junegunn/goyo.vim'
+Plug 'tpope/vim-surround'
+Plug 'mitsuhiko/vim-jinja', { 'for': 'jinja2' }
+Plug 'othree/es.next.syntax.vim', { 'for': 'javascript' }
+Plug 'elzr/vim-json', { 'for': 'json' }
+Plug 'othree/yajs.vim', { 'for': 'javascript' }
+Plug 'jelera/vim-javascript-syntax'
+Plug 'tpope/vim-commentary'
+Plug 'scrooloose/nerdtree'
+Plug 'kien/ctrlp.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'digitaltoad/vim-pug'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'mattn/emmet-vim'
+Plug 'tpope/vim-markdown'
+Plug 'hynek/vim-python-pep8-indent'
+Plug 'hdima/python-syntax'
 
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-
-Plugin 'mxw/vim-jsx'
-Plugin 'lifepillar/pgsql.vim'
-Plugin 'othree/javascript-libraries-syntax.vim'
-Plugin 'fatih/vim-go'
-Plugin 'nginx.vim'
-Plugin 'junegunn/goyo.vim'
-Plugin 'tpope/vim-surround'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'tpope/vim-commentary'
-Plugin 'ReplaceWithRegister'
-Plugin 'scrooloose/nerdtree'
-Plugin 'kien/ctrlp.vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'digitaltoad/vim-pug'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'mattn/emmet-vim'
-Plugin 'tpope/vim-markdown'
-Plugin 'hynek/vim-python-pep8-indent'
-Plugin 'hdima/python-syntax'
-
-call vundle#end()
+call plug#end()
 
 " ** - Python settings - **
 let python_highlight_all=1
